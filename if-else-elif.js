@@ -43,16 +43,66 @@ const exercise4 = (a, b) => {
 
 }
 
-exercise4(1, 2);
+// exercise4(10, 5)
+// exercise4(12, 6)
+// exercise4(3, 3)
+// exercise4(9, 8)
+
+/*                                     CONDITIONAL SOLUTION  TO DUPLICATION PROBLEM
+const fizzBuzz = (x) => {
+    let a;
+    if (x % 3 == 0) {
+        console.log(x, "Fizz");
+    }
+
+   
+
+    if (x % 5 == 0) {
+        console.log(x, "Buzz");
+    }
+
+     
+
+    if (x % 15 == 0) {
+        console.log(x, "FizzBuzz");
+    }
+    else if (x % 3 !== 0 && x % 5 !== 0 && x % 15 !== 0) { // if none of the previous ifs has run 
+        console.log(x);
+    }
+}    
+*/
 
 
+// We know the let a is falsy at the beginning 
+// We know that we want to see if any of the ifs are true
+// we know an if its true if its body is executed 
+
+const fizzBuzz = (x) => {
+
+    let a = undefined;
+
+    // || it does not equal itself 
+
+    if (x % 3 == 0) {
+        console.log(x, "Fizz");
+        a = x;
+    }
+
+    if (x % 5 == 0) {
+        console.log(x, "Buzz");
+        a = x;
+    }
+
+    if (x % 15 == 0) {
+        console.log(x, "FizzBuzz");
+        a = x
+    }
+    else if (a == undefined) { // if none of the previous ifs has run 
+        console.log(x);
+    }
+}
 
 
-
-
-
-
-
-
+fizzBuzz(15)
 
 
