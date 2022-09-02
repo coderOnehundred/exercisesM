@@ -25,9 +25,11 @@ const exercise2 = (x) => {
 
 const exercise3 = (x) => {
 
+
+
     /*   FIRST SOLUTION
 
-      if (x === true) {
+     if (x === true) {
         console.log("The argument is exactly true");
     }
     if (x) {
@@ -40,10 +42,12 @@ const exercise3 = (x) => {
         console.log("The argument is falsy");
     }
 
+
     -------------
 
                    SECOND WRONG SOLUTION
-    if (x === true) {
+
+       if (x === true) {
         console.log("The argument is exactly true");
     }
     if (x && !x === true) {
@@ -55,6 +59,7 @@ const exercise3 = (x) => {
     if (!x && !x === false) {
         console.log("The argument is falsy");
     }
+
     */
 
     if (x === true) {
@@ -71,7 +76,7 @@ const exercise3 = (x) => {
     }
 }
 
-exercise3("") // for false and true gives me two answer
+exercise3(true) // for false and true gives me two answer
 // show me how to youtube download -- 
 // I ended up with the solution after a nap (literally) I woke up and I had if
 // turns out I did not have it
