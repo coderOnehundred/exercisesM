@@ -25,7 +25,57 @@ const exercise2 = (x) => {
 
 const exercise3 = (x) => {
 
+    /*   FIRST SOLUTION
+
+      if (x === true) {
+        console.log("The argument is exactly true");
+    }
+    if (x) {
+        console.log("The argument is truthy");
+    }
+    if (x === false) {
+        console.log("The argument is false");
+    }
+    if (!x) {
+        console.log("The argument is falsy");
+    }
+
+    -------------
+
+                   SECOND WRONG SOLUTION
+    if (x === true) {
+        console.log("The argument is exactly true");
+    }
+    if (x && !x === true) {
+        console.log("The argument is truthy");
+    }
+    if (x === false) {
+        console.log("The argument is false");
+    }
+    if (!x && !x === false) {
+        console.log("The argument is falsy");
+    }
+    */
+
+    if (x === true) {
+        console.log("The argument is exactly true");
+    }
+    if (x && x !== true) {
+        console.log("The argument is truthy");
+    }
+    if (x === false) {
+        console.log("The argument is false");
+    }
+    if (!x && x !== false) {
+        console.log("The argument is falsy");
+    }
 }
+
+exercise3("") // for false and true gives me two answer
+// show me how to youtube download -- 
+// I ended up with the solution after a nap (literally) I woke up and I had if
+// turns out I did not have it
+
 
 const exercise4 = (a, b) => {
     if (a % 2 == 0 && b % 2 !== 0) {
@@ -103,6 +153,6 @@ const fizzBuzz = (x) => {
 }
 
 
-fizzBuzz(15)
+// fizzBuzz(15)  // fix this 
 
 
