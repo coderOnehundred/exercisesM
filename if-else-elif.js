@@ -25,7 +25,16 @@ const exercise2 = (x) => {
 
 const exercise3 = (x) => {
 
-
+    if (x === true) {
+        console.log("The argument is exactly true");
+    } else if (x) {
+        console.log("The argument is truthy");
+    }
+    if (x === false) {
+        console.log("The argument is false");
+    } else if (!x) {
+        console.log("The argument is falsy");
+    }
 
     /*   FIRST SOLUTION
 
@@ -62,21 +71,23 @@ const exercise3 = (x) => {
 
     */
 
-    if (x === true) {
-        console.log("The argument is exactly true");
-    }
-    if (x && x !== true) {
-        console.log("The argument is truthy");
-    }
-    if (x === false) {
-        console.log("The argument is false");
-    }
-    if (!x && x !== false) {
-        console.log("The argument is falsy");
-    }
-}
+    // MYYYY SOLUTION
 
-exercise3(true) // for false and true gives me two answer
+    // if (x === true) {
+    //     console.log("The argument is exactly true");
+    // }
+    // if (x && x !== true) {
+    //     console.log("The argument is truthy");
+    // }
+    // if (x === false) {
+    //     console.log("The argument is false");
+    // }
+    // if (!x && x !== false) {
+    //     console.log("The argument is falsy");
+    // }
+}
+// exercise3(0)
+// for false and true gives me two answer
 // show me how to youtube download -- 
 // I ended up with the solution after a nap (literally) I woke up and I had if
 // turns out I did not have it
@@ -134,30 +145,44 @@ const fizzBuzz = (x) => {
 
 const fizzBuzz = (x) => {
 
-    let a = undefined;
+    // let a = undefined;
 
     // || it does not equal itself 
 
-    if (x % 3 == 0) {
-        console.log(x, "Fizz");
-        a = x;
-    }
+    // if (x % 3 == 0) {
+    //     console.log(x, "Fizz");
+    //     a = x;
+    // }
 
-    if (x % 5 == 0) {
-        console.log(x, "Buzz");
-        a = x;
-    }
+    // if (x % 5 == 0) {
+    //     console.log(x, "Buzz");
+    //     a = x;
+    // }
 
-    if (x % 15 == 0) {
+    // if (x % 15 == 0) {
+    //     console.log(x, "FizzBuzz");
+    //     a = x
+    // }
+    // else if (a == undefined) { // if none of the previous ifs has run 
+    //     console.log(x);
+    // }
+
+    if (x % 15 === 0) {
         console.log(x, "FizzBuzz");
-        a = x
-    }
-    else if (a == undefined) { // if none of the previous ifs has run 
+    } else if (x % 5 === 0) {
+        console.log(x, "Buzz");
+    } else if (x % 3 === 0) {
+        console.log(x, "Fizz");
+    } else {
         console.log(x);
     }
 }
 
 
-// fizzBuzz(15)  // fix this 
+for (let i = 1; i <= 100; i = i + 1) {
+    fizzBuzz(i)
+}
+
+
 
 
