@@ -66,6 +66,11 @@ function exercise3(array, func) {
         console.log(func(i))
         // I did it? wtf
     }
+    console.log('SEPARATOR |||||||||||');
+    for (let i = 0; i < array.length; i = i + 1) {
+        func(array[i])
+        console.log(func(array[i]))
+    }
 }
 
 function argFunc(x) {
@@ -74,7 +79,26 @@ function argFunc(x) {
 
 exercise3([1, 3, 16, 71, 5], argFunc);
 
+/*
+Write a function called exercise4
+The function will receive one argument, an array of objects. The objects are of the form { value: number|string, func: function } - This means the value key will either be a number or a string and the func key will be a function.
 
+Write both a for of loop and a regular for loop that iterates over the argument array, extracts the value and func from the object and calls func with the value. It logs the return value.
+
+For example, if we send this input [{ value: 1, func: x => x + 1 }, { value: 'test', func: x => x.replaceAll('t', 'x') }] we expect to see 2 and xesx
+
+Call your function with an array defined like this. The first 2 objects will have value a number you want. The func for them will be some transformation you want ( add a value, multiply, count the digits, etc ). The next 3 objects will have value a string you want and the func some string method from here: https://www.w3schools.com/js/js_string_methods.asp
+
+{ value: number|string, func: function }
+*/
+
+function exercise4(arrayOfObjects) {
+    for (i of arrayOfObjects) {
+
+    }
+}
+
+exercise4([{ value: 1, func: x => x + 1 }, { value: 'test', func: x => x.replaceAll('t', 'x') }])
 
 
 
