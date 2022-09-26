@@ -77,7 +77,7 @@ function argFunc(x) {
     return x * 3;
 }
 
-exercise3([1, 3, 16, 71, 5], argFunc);
+// exercise3([1, 3, 16, 71, 5], argFunc);
 
 /*
 Write a function called exercise4
@@ -92,13 +92,38 @@ Call your function with an array defined like this. The first 2 objects will hav
 { value: number|string, func: function }
 */
 
+
 function exercise4(arrayOfObjects) {
+
+    const returnValues = []
+
     for (i of arrayOfObjects) {
 
+        const value = i.value
+        const func = i.func
+        const returnValue = func(value)
+
+        returnValues.push(returnValue)
+
+
+        // console.log(i.func(i.value));
+        // console.log(i)
+
+        // const valueKey = i.value;
+        // const valueFunc = i.func(valueKey);
+        // console.log(valueFunc)
     }
+    return returnValues;
 }
 
-exercise4([{ value: 1, func: x => x + 1 }, { value: 'test', func: x => x.replaceAll('t', 'x') }])
+const exercise4Result = (exercise4([{ value: 1, func: x => x + 1 }, { value: 'test', func: x => x.replaceAll('t', 'x') }]));
+const exercise4Result2 = (exercise4([{ value: 5, func: x => x * 7 }, { value: 'test', func: x => x.replaceAll('M', 'M') }]))
+console.log(exercise4Result2)
+
+
+// (exercise4([{ value: 1, func: x => x + 1 }, { value: 'test', func: x => x.replaceAll('t', 'x') }]))
+
+
 
 
 
