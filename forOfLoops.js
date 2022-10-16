@@ -118,22 +118,56 @@ function exercise4(arrayOfObjects) {
 
 const exercise4Result = (exercise4([{ value: 1, func: x => x + 1 }, { value: 'test', func: x => x.replaceAll('t', 'x') }]));
 const exercise4Result2 = (exercise4([{ value: 5, func: x => x * 7 }, { value: 'test', func: x => x.replaceAll('M', 'M') }]))
-console.log(exercise4Result2)
+// console.log(exercise4Result2)
 
 
 // (exercise4([{ value: 1, func: x => x + 1 }, { value: 'test', func: x => x.replaceAll('t', 'x') }]))
 
 
 
+function getRandom() {
+    const numberReturn = Math.floor(Math.random() * 12);
+    return numberReturn;
+}
 
 
+// console.log(getRandom())
 
 
+const exercise5 = (aNumber) => {
+    const myArray = new Array(aNumber);
+    myArray.fill(getRandom());
+    const newArray = [];
+
+    for (currentElement of myArray) {
+        const timeStamp = Date.now();
+        const newRandom = getRandom();
+        if (newRandom > currentElement) {
+            const difference = newRandom - currentElement;
+            newArray.push(Number(timeStamp.toString().slice(-difference)));
+        }
+        else if (newRandom < currentElement) {
+            newArray.push(`case smaller - ${getRandom()}`)
+        }
+        else {
+            newArray.push('equal')
+        }
+    }
 
 
+    // console.log(myArray.length);
 
+    return newArray;
+}
 
+// console.log(exercise5(2))
 
+const arrayOfHundred = new Array(100).fill(null);
+
+for (element of arrayOfHundred) {
+    const returnValue = exercise5(getRandom());
+    console.log(returnValue);
+}
 
 
 
