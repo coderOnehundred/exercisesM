@@ -162,6 +162,7 @@ function youAreFired(employeesList, name) {
 }
 
 youAreFired(employeesList, "Kate");
+youAreFired(employeesList, "Manu");
 
 // [ { id: 1, name: 'John' }, { id: 3, name: 'Peter' } ]
 console.log("|||||||||||||||||");
